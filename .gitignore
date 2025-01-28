@@ -1,0 +1,8 @@
+# Ignore Visual Studio files
+*.suo
+*.user
+*.sln.docstates
+
+# Ignore binary files
+bin/
+obj/
