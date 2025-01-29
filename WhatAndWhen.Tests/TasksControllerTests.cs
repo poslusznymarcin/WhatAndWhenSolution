@@ -38,10 +38,13 @@ namespace WhatAndWhen.Tests
             var result = await _controller.Index() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result, Is.InstanceOf<ViewResult>());
+            Assert.That(result.ViewName, Is.EqualTo("Index").Or.Null);
+            Assert.That(result.Model, Is.Not.Null);
             var model = result.Model as List<Data.Entities.Task>;
-            Assert.IsNotNull(model);
-            Assert.AreEqual(1, model.Count);
+            Assert.That(model, Is.Not.Null);
+            Assert.That(model.Count, Is.EqualTo(1));
         }
 
         [TearDown]
@@ -56,7 +59,9 @@ namespace WhatAndWhen.Tests
 
         public void Dispose()
         {
+            
             _context?.Dispose();
+            _controller = null;
         }
     }
 }

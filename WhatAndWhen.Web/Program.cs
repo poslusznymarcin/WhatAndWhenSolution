@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WhatAndWhen.Data;
+using WhatAndWhen.Web.Middleware;
 
 namespace WhatAndWhen.Web
 {
@@ -29,6 +30,10 @@ namespace WhatAndWhen.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseRequestLogging();
+
+            app.UseLastVisit();
 
             app.UseAuthorization();
 
