@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WhatAndWhen.Data\WhatAndWhen.Data.csproj" />
+    <ProjectReference Include="..\WhatAndWhen.Web\WhatAndWhen.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
