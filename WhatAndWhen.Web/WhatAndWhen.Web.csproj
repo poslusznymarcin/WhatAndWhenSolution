@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WhatAndWhen.Data\WhatAndWhen.Data.csproj" />
+  </ItemGroup>
+
 </Project>
