@@ -32,6 +32,8 @@ namespace WhatAndWhen.Web
 
             app.UseAuthorization();
 
+            app.MapControllers();
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
